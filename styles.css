@@ -1,0 +1,285 @@
+/* ==========================================================================
+   SaveEat Stylesheet (cis300.css)
+   Based on Discussion 2 Wireframe Layout
+   ========================================================================== */
+
+/* 1. Global Box-Sizing & Reset Selector (보고서 문제해결 내용 반영) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Body Typography & Base Selector */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #222222;
+}
+
+/* 3. Header & Logo Box Selector (와이어프레임 상단 중앙 로고 박스) */
+.site-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 1rem 1rem 1rem;
+    background-color: #ffffff;
+}
+
+.logo-box {
+    border: 2px solid #222222;
+    padding: 0.5rem 2rem;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.logo-box h1 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #111111;
+}
+
+/* 4. Main Navigation Bar Selector (와이어프레임 상하 실선 메뉴) */
+.main-nav {
+    border-top: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    padding: 0.75rem 0;
+    background-color: #ffffff;
+}
+
+.nav-menu {
+    max-width: 1100px;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #222222;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+    transition: color 0.2s ease;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: #2e7d32;
+    text-decoration: underline;
+}
+
+/* 5. Main Content Wrapper */
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+/* 6. Hero Section (와이어프레임 X자 대형 이미지 플레이스홀더 영역) */
+.hero-section {
+    margin-bottom: 2rem;
+}
+
+.hero-placeholder {
+    position: relative;
+    border: 1px solid #333333;
+    height: 340px;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* 와이어프레임의 X자 라인 표현 */
+.wireframe-cross {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        linear-gradient(to top right, transparent calc(50% - 1px), #d1d5db calc(50% - 1px), #d1d5db calc(50% + 1px), transparent calc(50% + 1px)),
+        linear-gradient(to bottom right, transparent calc(50% - 1px), #d1d5db calc(50% - 1px), #d1d5db calc(50% + 1px), transparent calc(50% + 1px));
+    z-index: 1;
+}
+
+.hero-text-overlay {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.92);
+    border: 1px solid #222222;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    max-width: 80%;
+}
+
+.hero-text-overlay h2 {
+    font-size: 1.4rem;
+    color: #111111;
+    margin-bottom: 0.5rem;
+}
+
+.hero-text-overlay p {
+    font-size: 0.95rem;
+    color: #4b5563;
+}
+
+/* 7. Featured 3 Columns Grid (와이어프레임 하단 3개 박스) */
+.featured-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.featured-card {
+    flex: 1 1 calc(33.333% - 1rem);
+    border: 1px solid #333333;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-visual {
+    position: relative;
+    height: 160px;
+    border-bottom: 1px solid #333333;
+    background-color: #fdfdfd;
+}
+
+.card-tag {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    z-index: 2;
+    background-color: #2e7d32;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+}
+
+.card-content {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    font-size: 1.1rem;
+    color: #111111;
+    margin-bottom: 0.5rem;
+}
+
+.card-content p {
+    font-size: 0.9rem;
+    color: #555555;
+    margin-bottom: 1.2rem;
+    flex-grow: 1;
+}
+
+.card-btn {
+    align-self: flex-start;
+    text-decoration: none;
+    color: #2e7d32;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.card-btn:hover {
+    text-decoration: underline;
+}
+
+/* 8. Footer Section (와이어프레임 하단 테두리 상자 구조) */
+.site-footer {
+    border-top: 1px solid #333333;
+    background-color: #fafafa;
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid #333333;
+    padding: 1.5rem;
+    background-color: #ffffff;
+}
+
+.footer-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    color: #111111;
+}
+
+.footer-nav {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #333333;
+    font-size: 0.95rem;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+.footer-nav .divider {
+    color: #888888;
+}
+
+.footer-contact {
+    font-size: 0.95rem;
+    color: #333333;
+    margin-bottom: 0.75rem;
+}
+
+.footer-contact a {
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.footer-external {
+    font-size: 0.8rem;
+    color: #777777;
+}
+
+.footer-external a {
+    color: #666666;
+    text-decoration: none;
+}
+
+/* 9. 반응형 미디어 쿼리 (태블릿/모바일 줄바꿈 처리) */
+@media (max-width: 768px) {
+    .featured-section {
+        flex-direction: column;
+    }
+    
+    .nav-menu {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
